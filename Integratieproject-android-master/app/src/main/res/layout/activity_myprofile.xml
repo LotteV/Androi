@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:id="@+id/imgProfilePic"
+            android:src="@drawable/avatar"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@android:color/transparent"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/firstname">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtProfFirstName"
+                android:text="@string/firstname"
+                android:textSize="16sp"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="10dp"
+                android:layout_weight="0.4"/>
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                android:layout_marginTop="15dp"
+                android:hint="@string/firstname"
+                android:textSize="16sp"
+                android:id="@+id/editFirstname" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/lastname">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtProfSurname"
+                android:text="@string/lastname"
+                android:textSize="16sp"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="10dp"
+                android:layout_weight="0.4"/>
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                android:layout_marginTop="15dp"
+                android:textSize="16sp"
+                android:hint="@string/lastname"
+                android:id="@+id/editSurname" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/phoneNumber">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtPhoneNumber"
+                android:text="@string/phonenumber"
+                android:textSize="16sp"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="10dp"
+                android:layout_weight="0.4"/>
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                android:textSize="16sp"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="5dp"
+                android:hint="@string/phonenumber"
+                android:id="@+id/editPhoneNumber"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/email">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtProfMail"
+                android:text="@string/emailRegister"
+                android:textSize="16sp"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="10dp"
+                android:layout_weight="0.4"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                android:textSize="16sp"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="5dp"
+                android:hint="@string/emailRegister"
+                android:id="@+id/editEmail"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblError"
+            android:textColor="@android:color/holo_red_dark" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnSaveProfile"
+            android:text="@string/saveProf"
+            android:layout_marginTop="30dp"
+            android:background="@color/mint_green"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnChangePassword"
+            android:text="@string/changePas"
+            android:layout_marginTop="20dp"
+            android:background="@color/mint_green"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnCheckRes"
+            android:text="@string/checkRes"
+            android:layout_marginTop="20dp"
+            android:background="@color/mint_green"/>
+
+    </LinearLayout>
+
+</ScrollView>

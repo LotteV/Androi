@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <android.support.v4.view.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.03"
+        android:id="@+id/vwpFavorites"
+        android:layout_above="@+id/linearLayout"></android.support.v4.view.ViewPager>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_height="56dp"
+        android:background="@color/mint_green"
+        android:id="@+id/linearLayout"
+        android:baselineAligned="false">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:soundEffectsEnabled="false"
+            android:clickable="false"
+            android:id="@+id/lytList"
+            android:background="@drawable/nav_button_styles">
+
+            <ImageView
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_list_icon"
+                android:id="@+id/icnList"
+                android:layout_width="match_parent" />
+
+            <TextView
+                android:text="Lijst"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblList"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textAlignment="center" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/lytSearch"
+            android:background="@drawable/nav_button_styles">
+
+            <ImageView
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_search_icon"
+                android:id="@+id/icnSearch"
+                android:layout_width="match_parent"
+                android:contentDescription="Search"/>
+
+            <TextView
+                android:text="Zoeken"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblSearch"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textAlignment="center" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/lytBook"
+            android:background="@drawable/nav_button_styles">
+            <ImageView
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_check_icon"
+                android:id="@+id/icnBook"
+                android:layout_width="match_parent" />
+            <TextView
+                android:text="Reserveer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblBook"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textAlignment="center" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

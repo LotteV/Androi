@@ -1,0 +1,575 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:id="@+id/main_scrollview"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/lytHeader"
+            android:orientation="horizontal"
+            android:layout_marginStart="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtBranchName"
+                android:text="@string/branchName"
+                android:textSize="20dp"
+                android:gravity="left"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="0.9"
+                />
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnFavorites"
+                android:layout_weight="0.1"
+                android:src="@drawable/ic_favorite"
+                android:background="@color/white"
+                android:layout_marginTop="5dp"/>
+
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/layoutbutttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/lytHeader">
+
+            <Button
+                android:id="@+id/btnFotos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/mint_green"
+                android:text="Foto's"
+                />
+
+            <Button
+                android:id="@+id/btnPlace"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/mint_green"
+                android:text="Plaats"
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/layoutbutttons"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/viewFoto"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:id="@+id/viewPlaats"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <fragment
+                    android:id="@+id/map"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    class="com.google.android.gms.maps.SupportMapFragment"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btnBeschrijving"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layoutImage"
+            android:background="@color/mint_green"
+            android:text="Beschrijving"
+            />
+
+        <TextView
+            android:id="@+id/viewBeschrijving"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/btnBeschrijving"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"/>
+
+        <LinearLayout
+            android:id="@+id/layoutbuttons2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/viewBeschrijving"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/mint_green"
+                android:text="Info"
+                />
+
+            <Button
+                android:id="@+id/btnUren"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/mint_green"
+                android:text="Uren"
+                />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/layoutImage2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layoutbuttons2"
+            android:orientation="horizontal">
+
+            <TableLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/layoutUren"
+                android:orientation="horizontal"
+                android:paddingTop="15dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="15dp"
+                android:visibility="gone">
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_column="1"
+                        android:text="@string/maandag"/>
+
+                    <TextView android:id="@+id/txtMaandag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="2"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:textAlignment="gravity"
+                        android:hint="@string/gesloten"
+                    />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_column="1"
+                        android:text="@string/dindsdag"/>
+
+                    <TextView android:id="@+id/txtDinsdag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/gesloten"
+                        android:layout_column="2"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:textAlignment="gravity"/>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_column="1"
+                        android:text="@string/woensdag"/>
+
+                    <TextView android:id="@+id/txtWoensdag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/gesloten"
+                        android:layout_column="2"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:textAlignment="gravity"/>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_column="1"
+                        android:text="@string/donderdag"
+                        />
+
+                    <TextView android:id="@+id/txtDonderdag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/gesloten"
+                        android:layout_column="2"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:textAlignment="gravity"/>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_column="1"
+                        android:text="@string/vrijdag"/>
+
+                    <TextView android:id="@+id/txtVrijdag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/gesloten"
+                        android:layout_column="2"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:textAlignment="gravity"/>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_column="1"
+                        android:text="@string/zaterdag"/>
+
+                    <TextView android:id="@+id/txtZaterdag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/gesloten"
+                        android:layout_column="2"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:textAlignment="gravity"/>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_column="1"
+                        android:text="@string/zondag"/>
+
+                    <TextView android:id="@+id/txtZondag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/gesloten"
+                        android:layout_column="2"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:textAlignment="gravity"/>
+
+                </TableRow>
+
+            </TableLayout>
+
+            <TableLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/layoutInfo"
+                android:orientation="horizontal"
+                android:paddingTop="15dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="15dp">
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_column="1"
+                        android:text="@string/Adres"
+                        android:id="@+id/textView" />
+
+                    <TextView android:id="@+id/txtAdres"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/vbAdres"
+                        android:layout_column="2"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:textAlignment="gravity"/>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_column="1"
+                        android:text="@string/telnr"/>
+
+                    <TextView android:id="@+id/txtTelnr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/vbTel"
+                        android:layout_column="2"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:textAlignment="gravity"/>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_column="1"
+                        android:text="@string/email"/>
+
+                    <TextView android:id="@+id/txtEmail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/vbEmail"
+                        android:layout_column="2"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:textAlignment="gravity"/>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_column="1"
+                        android:text="@string/payment"/>
+
+                    <TextView android:id="@+id/txtPayment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/vbPayment"
+                        android:layout_column="2"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:textAlignment="gravity"/>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_column="1"
+                        android:text="@string/facility"/>
+
+                    <TextView android:id="@+id/txtFacility"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/vbFacility"
+                        android:layout_column="2"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:textAlignment="gravity"/>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_column="1"
+                        android:text="@string/accessibility"/>
+
+                    <TextView android:id="@+id/txtAccessibility"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/vbAccessibility"
+                        android:layout_column="2"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:textAlignment="gravity"/>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_column="1"
+                        android:text="@string/atmosphere"/>
+
+                    <TextView android:id="@+id/txtAtmosphere"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/vbAtmosphere"
+                        android:layout_column="2"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:textAlignment="gravity"/>
+
+                </TableRow>
+
+            </TableLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutbutttons3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/layoutImage2"
+            >
+
+            <Button
+                android:id="@+id/btnReview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/mint_green"
+                android:text="Reviews"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutImage3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/layoutbutttons3"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <ListView
+                android:id="@+id/lvReview"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_margin="10dp"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:listSelector="@android:color/transparent"
+                />
+
+            <TextView
+                android:id="@+id/empty"
+                android:text="@string/emptyReviews"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"
+                />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnReserveren"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layoutImage3"
+            android:background="@drawable/nav_button_styles"
+            android:text="Reserveren"
+            />
+
+    </RelativeLayout>
+
+
+</ScrollView>

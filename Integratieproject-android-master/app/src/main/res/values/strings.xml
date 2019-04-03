@@ -1,0 +1,105 @@
+<resources>
+    <string name="app_name">ReservatieSysteem</string>
+    <string name="title_activity_start">StartActivity</string>
+
+    <!-- Google API -->
+    <string name="Google_API">AIzaSyBeJsSsX187yxNxQ_5jvUbG1TvO7k0pAx8</string>
+
+    <string name="emptyReviews">Geen reviews beschikbaar</string>
+    <string name="emptyPastReservations">Geen afgelopen reservaties</string>
+    <string name="emptyFutureReservations">Geen toekomstige reservaties</string>
+    <string name="emptyMessages">Geen berichten beschikbaar</string>
+    <string name="emptyFavorites">Geen favorieten</string>
+
+    <!-- Registreer & Login -->
+    <string name="register">Registreer</string>
+    <string name="login">Inloggen</string>
+    <string name="logout">Uitloggen</string>
+    <string name="myFavorites">Mijn favorieten</string>
+    <string name="myProfile">Mijn profiel</string>
+    <string name="username">Gebruikersnaam</string>
+    <string name="password">Paswoord</string>
+    <string name="firstname">Voornaam</string>
+    <string name="lastname">Achternaam</string>
+    <string name="emailRegister">E-mail</string>
+    <string name="phonenumber">Telefoon nummer</string>
+    <string name="confirmPassword">Bevestig wachtwoord</string>
+
+    <!-- Search fragment -->
+    <string name="search">Zoeken</string>
+
+    <!-- Weekdagen -->
+    <string name="maandag">Maandag</string>
+    <string name="dindsdag">Dinsdag</string>
+    <string name="woensdag">Woensdag</string>
+    <string name="donderdag">Donderdag</string>
+    <string name="vrijdag">Vrijdag</string>
+    <string name="zaterdag">Zaterdag</string>
+    <string name="zondag">Zondag</string>
+
+    <!-- hint uren -->
+    <string name="uren">10.30 - 17.00</string>
+    <string name="gesloten">Gesloten</string>
+
+    <!-- view Info -->
+    <string name="Adres">Adres</string>
+    <string name="vbAdres">Nationalestraat 5, 2018 Antwerpen</string>
+    <string name="telnr">Tel Nr.</string>
+    <string name="vbTel">03 613 16 00</string>
+    <string name="email">Email</string>
+    <string name="vbEmail">voorbeeld@test.com</string>
+    <string name="payment">Betaling</string>
+    <string name="vbPayment">Visa, Bancontact</string>
+    <string name="facility">Faciliteiten</string>
+    <string name="vbFacility">Wifi</string>
+    <string name="accessibility">Toegankelijkheid</string>
+    <string name="vbAccessibility">Rolstoel</string>
+    <string name="atmosphere">Atmosfeer</string>
+    <string name="vbAtmosphere">Modern</string>
+    <string name="title_activity_login">Login</string>
+
+    <!-- reservation info -->
+    <string name="branchName">Naam filiaal</string>
+    <string name="possibleRes">Reservatie mogelijk</string>
+    <string name="confirmRes">Door te bevestigen gaat u akkoord met de privacyvoorwaarden.</string>
+    <string name="btnconfirmRes">Bevestigen</string>
+    <string name="dateRes">24/02/2017</string>
+    <string name="timeRes">17:00</string>
+    <string name="numberRes">2 personen</string>
+    <string name="infoRes">Uw reservatie werd toegevoegd aan de agenda van het restaurant, en werd onmiddelijk goedgekeurd!\n\n
+        U ontvangt weldra een bevestiging van uw reservatie via e-mail. Check zeker ook regelmatig je spamfolder.\n\n
+        Bedankt voor uw reservatie.
+    </string>
+
+    <string name="btnCalendar">Toevoegen aan je kalender</string>
+    <string name="btnBack">Terug</string>
+    
+    <!-- Profile -->
+    <string name="checkRes">Bekijk je reservaties</string>
+    <string name="resBranchName">Naam filiaal: </string>
+    <string name="resDate">Datum reservatie: </string>
+    <string name="resBranchAdress">Adres: </string>
+    <string name="resAmount">Aantal personen: </string>
+    <string name="changePas">Verander wachtwoord</string>
+    <string name="saveProf">Gegevens opslaan</string>
+
+    <!-- Reservaties -->
+    <string name="resAnn">Reservatie Annuleren</string>
+    <string name="postMessage">Bericht sturen</string>
+    <string name="getMessages">Berichten op reservatie:</string>
+
+    <!-- About -->
+    <string name="about">
+        LeisureBooker is een systeem dat mensen toelaat om een vrijetijdsactiviteit te reserveren (Bowlingbaan, pooltafel, tennisveld, ...).
+        \n\nBij dit voorbeeld zullen wij ons focussen op bowling maar het is wel eenvoudig aanpasbaar naar andere toepassingen.
+        \n\nMensen kunnen zoeken op gemeente om te kijken waar er bowlingbanen beschikbaar zijn op een bepaald uur en dag.
+        \n\nHet resultaat is een lijst van filialen die bowlingbanen ter beschikking hebben op het gevraagde tijdstip en datum. De gebruiker kan een filiaal kiezen en hierop reserveren.
+        \n\n\nCreated By:
+        \n\nEmmanuel Kouar
+        \nNico Pelsmaekers
+        \nJasper Van Grieken
+        \nSeppe Van Winkel
+        \nLotte Verbraeken
+    </string>
+    <string name="reserveren">Reserveren</string>
+</resources>

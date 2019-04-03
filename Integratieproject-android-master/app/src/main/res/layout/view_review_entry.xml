@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TableLayout android:layout_width="0dip"
+            android:layout_weight="2" android:layout_height="fill_parent">
+
+            <TableRow android:layout_width="0dip" android:layout_weight="2"
+                android:layout_height="0dip">
+
+                <TextView android:id="@+id/reviewText"
+                    android:hint="Review Text"/>
+
+            </TableRow>
+            <TableRow android:layout_width="0dip"
+                android:layout_weight="2"
+                android:layout_height="0dip">
+
+                <TextView android:id="@+id/reviewUserDate"
+                    android:hint="Posted by Lotte on 02/03/2017"/>
+
+            </TableRow>
+        </TableLayout>
+
+        <TableLayout
+            android:layout_width="0dp"
+            android:layout_weight="0.3"
+            android:layout_height="fill_parent">
+
+            <TableRow>
+                <ImageView android:id="@+id/imgResult"
+                    android:src="@drawable/thumb_down"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    />
+           </TableRow>
+
+        </TableLayout>
+    </TableRow>
+
+</TableLayout>
